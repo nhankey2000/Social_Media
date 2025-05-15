@@ -14,8 +14,9 @@ class Kernel extends ConsoleKernel
         })->everyMinute();
     $schedule->command('posts:auto-post')->everyMinute();
     $schedule->command('prompts:process')->everyMinute();
-    $schedule->command('analytics:sync')->everyMinute(); 
-  
+    $schedule->command('analytics:sync')->dailyAt('02:00');
+
+
     }
 
     protected function commands(): void
