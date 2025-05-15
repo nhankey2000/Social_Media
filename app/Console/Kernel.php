@@ -16,7 +16,7 @@ class Kernel extends ConsoleKernel
         })->everyFiveMinutes();
 
         // Các lệnh tùy chỉnh
-        $schedule->command('posts:auto-post')
+        $schedule->command('posts:publish-scheduled')
             ->everyMinute()
             ->withoutOverlapping();
 
